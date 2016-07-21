@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <a href="/monkeys/new"><p>Add your own monkey!</p></a>
+    <table>
+      <thead>
+        ID
+      </thead>
+      <thead>
+        Name
+      </thead>
+      <thead>
+        Age
+      </thead>
+      <thead>
+        Clothes
+      </thead>
+      <% for(var i=0; i < monkeys.length; i++) { %>
+      <tr>
+        <td>
+          <%= monkeys[i].id %>
+        </td>
+        <td>
+          <a href="/monkeys/<%= monkeys[i].id %>/show"><%= monkeys[i].name %></a>
+        </td>
+        <td>
+          <%= monkeys[i].age %>
+        </td>
+        <td>
+          <%= monkeys[i].clothes %>
+        </td>
+        <td>
+          <a href='/monkeys/<%= monkeys[i].id %>/delete'>DELETE</a>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>

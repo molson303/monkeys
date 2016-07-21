@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit <%= monkey.name %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Edit a monkey!</h2>
+      <form  action="/monkeys/<%= monkey.id %>" method="post">
+        <input type="text" name="name" value="<%= monkey.name %>">
+        <input type="text" name="age" value="<%= monkey.age %>">
+        <input type="text" name="clothes" value="<%= monkey.clothes %>">
+        <input type="submit" value="Edit your monkey!">
+      </form>
+    </div>
+  </body>
+</html>

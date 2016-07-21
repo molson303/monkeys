@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= monkey.name %>, the monkey!</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <table>
+      <thead>
+        ID
+      </thead>
+      <thead>
+        Name
+      </thead>
+      <thead>
+        Age
+      </thead>
+      <thead>
+        Clothes
+      </thead>
+      <tr>
+        <td>
+          <%= monkey.id %>
+        </td>
+        <td>
+          <%= monkey.name %>
+        </td>
+        <td>
+          <%= monkey.age %>
+        </td>
+        <td>
+          <%= monkey.clothes %>
+        </td>
+        <td>
+          <a href='/monkeys/<%= monkey.id %>/edit'>EDIT</a>
+        </td>
+        <td>
+          <a href='/monkeys/<%= monkey.id %>/delete'>DELETE</a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
